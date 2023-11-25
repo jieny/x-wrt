@@ -22,7 +22,7 @@ uci -q batch <<-EOT
 	set network.lan1=interface
 	set network.lan1.proto='static'
 	set network.lan1.device="macvlan0"
-	set network.lan1.ipaddr='192.168.15.1'
+	set network.lan1.ipaddr='192.168.14.1'
 	set network.lan1.netmask='255.255.255.0'
 	commit network
 	EOT
