@@ -5,3 +5,5 @@
 
 # 来源
 https://github.com/esirplayground/luci-app-poweroff
+
+原项目的 poweroff.htm 会页面错误，仅行分隔符有差异
