@@ -111,7 +111,7 @@ define Package/mytest
     +netcat +iperf3 +iftop +git-http \
     +wget-ssl \
     +luci-mod-dashboard +luci-app-frpc +luci-app-ksmbd +luci-app-openvpn +luci-app-pgyvpn +luci-app-phtunnel \
-    +luci-app-ramfree +luci-app-samba4 +luci-app-smartdns +luci-app-ttyd +luci-app-watchcat +luci-app-wol \
+    +luci-app-ramfree +luci-app-samba4 +luci-app-smartdns +luci-app-ttyd +luci-app-watchcat +luci-app-wol
 	TITLE:=mytest, TITLE
 	URL:=https://www.xxx.com/$(PKG_FLAGS)${PKG_ROOT}
 	PKGARCH:=all
