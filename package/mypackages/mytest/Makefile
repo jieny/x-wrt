@@ -99,12 +99,8 @@ define Package/mytest
 	CATEGORY:=ZZZ
 	#SUBMENU:=XXX
 	DEPENDS:=@(arm||aarch64||mips||mipsel||i386||x86_64) \
-	+iptables +libc +libopenssl +librt \
-	+libpthread +libstdcpp +kmod-tun \
 	+blockd +ca-bundle +ca-certificates +sudo \
-	+kmod-cryptodev +kmod-ipt-nat6 +kmod-nft-tproxy +kmod-netlink-diag +libsodium +libudns \
-	+luci-app-frpc +luci-app-ksmbd +luci-app-openvpn +luci-app-pgyvpn +luci-app-phtunnel \
-	+luci-app-ramfree +luci-app-samba4 +luci-app-smartdns +luci-app-ttyd +luci-app-watchcat +luci-app-wol \
+	+kmod-scsi-core +kmod-cryptodev +kmod-ipt-nat +kmod-ipt-nat6 +kmod-nft-tproxy +kmod-netlink-diag +libsodium +libudns \
 	+luci-proto-relay +luci-proto-wireguard +curl +rclone-config +rsyncd +vsftpd +xtables-legacy \
 	+iptables-mod-conntrack-extra +iptables-mod-extra +iptables-mod-filter \
 	+iptables-mod-tproxy +iptables-mod-socket +iptables-mod-iprange +openssh-sftp-server \
@@ -114,7 +110,8 @@ define Package/mytest
     +grep +less +lsof +more +mount-utils +sed +tar +tree +whereis +which +whois \
     +netcat +iperf3 +iftop +git-http \
     +wget-ssl \
-    +luci-mod-dashboard
+    +luci-mod-dashboard +luci-app-frpc +luci-app-ksmbd +luci-app-openvpn +luci-app-pgyvpn +luci-app-phtunnel \
+    +luci-app-ramfree +luci-app-samba4 +luci-app-smartdns +luci-app-ttyd +luci-app-watchcat +luci-app-wol \
 	TITLE:=mytest, TITLE
 	URL:=https://www.xxx.com/$(PKG_FLAGS)${PKG_ROOT}
 	PKGARCH:=all
