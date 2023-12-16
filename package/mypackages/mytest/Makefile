@@ -100,18 +100,18 @@ define Package/mytest
 	#SUBMENU:=XXX
 	DEPENDS:=@(arm||aarch64||mips||mipsel||i386||x86_64) \
 	+blockd +ca-bundle +ca-certificates +sudo \
-	+kmod-scsi-core +kmod-cryptodev +kmod-ipt-nat +kmod-ipt-nat6 +kmod-nft-tproxy +kmod-netlink-diag +libsodium +libudns \
-	+luci-proto-relay +luci-proto-wireguard +curl +rclone-config +rsyncd +vsftpd +xtables-legacy \
-	+iptables-mod-conntrack-extra +iptables-mod-extra +iptables-mod-filter \
-	+iptables-mod-tproxy +iptables-mod-socket +iptables-mod-iprange +openssh-sftp-server \
-	+openvpn-easy-rsa +pptpd +wireguard-tools +xl2tpd +wakeonlan +wg-installer-client \
+	+kmod-scsi-core +kmod-cryptodev +kmod-ipt-nat +kmod-ipt-nat6 +kmod-nft-tproxy +kmod-netlink-diag +kmod-mppe +kmod-pptp +libsodium +libudns \
+	+python3-light +python3-pip \
+	+luci-proto-ipv6 +luci-proto-ppp +luci-proto-relay +luci-proto-wireguard \
+	+curl +rclone-config +rsyncd +vsftpd +wget-ssl \
+	+xtables-legacy +iptables-mod-conntrack-extra +iptables-mod-extra +iptables-mod-filter +iptables-mod-iprange +iptables-mod-socket +iptables-mod-tproxy \
+	+ip-full +openssh-sftp-server \
+	+openvpn-easy-rsa +openvpn-openssl +pptpd +wireguard-tools +xl2tpd \
+	+git-http +nginx-full +nginx-mod-dav-ext +nginx-mod-headers-more +nginx-mod-lua +nginx-mod-stream +nginx-mod-ts \
+	+iftop +iperf3 +netcat +tcpdump +tcping +wakeonlan +wg-installer-client \
 	+bzip2 +gzip +unzip \
     +eject +fdisk +lsblk +nano-full +acpid \
-    +grep +less +lsof +more +mount-utils +sed +tar +tree +whereis +which +whois \
-    +netcat +iperf3 +iftop +git-http \
-    +wget-ssl \
-    +luci-mod-dashboard +luci-app-frpc +luci-app-ksmbd +luci-app-openvpn +luci-app-pgyvpn +luci-app-phtunnel \
-    +luci-app-ramfree +luci-app-samba4 +luci-app-smartdns +luci-app-ttyd +luci-app-watchcat +luci-app-wol
+    +grep +less +lsof +more +mount-utils +sed +tar +tree +whereis +which +whois
 	TITLE:=mytest, TITLE
 	URL:=https://www.xxx.com/$(PKG_FLAGS)${PKG_ROOT}
 	PKGARCH:=all
