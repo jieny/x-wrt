@@ -100,7 +100,7 @@ define Package/mytest
 	#SUBMENU:=XXX
 	DEPENDS:=@(arm||aarch64||mips||mipsel||i386||x86_64) \
 	+blockd +ca-bundle +ca-certificates +sudo \
-	+kmod-scsi-core +kmod-cryptodev +kmod-ipt-nat +kmod-ipt-nat6 +kmod-nft-tproxy +kmod-netlink-diag +kmod-mppe +kmod-pptp +libsodium +libudns \
+	+kmod-scsi-core +kmod-cryptodev +kmod-ipt-nat +kmod-ipt-nat6 +kmod-nft-tproxy +kmod-netlink-diag +libsodium +libudns \
 	+python3-light +python3-pip \
 	+luci-proto-ipv6 +luci-proto-ppp +luci-proto-relay +luci-proto-wireguard \
 	+curl +rclone-config +rsyncd +vsftpd +wget-ssl \
