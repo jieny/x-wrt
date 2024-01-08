@@ -31,7 +31,7 @@ define my_install_step
 	# 666-TARGET_ROOTFS_DIR=/mnt/img2/tmp/x-wrt-x86-ok-26a279304f442548fe3aed33e5d5b202-202312092144/build_dir/target-x86_64_musl
 	# 777-CONFIG_TARGET_ROOTFS_DIR=
 
-	rm -rf $(PKG_BUILD_DIR)/root-$(BOARD)/etc/init.d/zerotier
+	#rm -rf $(PKG_BUILD_DIR)/root-$(BOARD)/etc/init.d/zerotier
 endef
 
 include $(TOPDIR)/feeds/luci/luci.mk
