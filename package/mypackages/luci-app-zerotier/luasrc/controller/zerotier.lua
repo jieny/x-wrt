@@ -16,7 +16,9 @@ end
 
 function act_status()
 	local e = {}
-	e.running = luci.sys.call("pgrep /usr/bin/zerotier-one >/dev/null") == 0
+	-- e.running = luci.sys.call("pgrep /usr/bin/zerotier-one >/dev/null") == 0
+	-- zerotier 未运行 改为 pgrep zerotier-one
+	e.running = luci.sys.call("pgrep zerotier-one >/dev/null") == 0
 	luci.http.prepare_content("application/json")
 	luci.http.write_json(e)
 end
