@@ -2,19 +2,21 @@
 
 START=50
 STOP=10
+# USE_PROCD=1
 
 VERYSYNC="/usr/bin/verysync"
 
-start() {
+start_service() {
 	local enabled="$(uci get verysync.config.enabled)"
 	local port="$(uci get verysync.config.port)"
 	local profile="$(uci get verysync.config.profile)"
 	stop
 	[ "${enabled}" == "1" ] || exit 0
 	export HOME="/root/"
+	# /usr/bin/verysync -gui-address=0.0.0.0:8886 -logfile=/var/log/verysync.log -home=/etc/verysync/ -no-browser >/dev/null 2>&1 &
 	"${VERYSYNC}" -gui-address="0.0.0.0:${port}" -logfile="/var/log/verysync.log" -home="${profile}" -no-browser >/dev/null 2>&1 &
 }
 
-stop() {
+stop_service() {
 	kill -9 `pgrep "${VERYSYNC}"` >/dev/null 2>&1
 }
