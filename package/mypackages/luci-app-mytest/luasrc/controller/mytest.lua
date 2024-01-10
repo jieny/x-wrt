@@ -17,6 +17,8 @@ function index()
 	entry({"admin", "services", "mytest", "setup"}, cbi("xxx/mytest_setup"), _("Setup设置"), 1).leaf = true
 	entry({"admin", "services", "mytest", "status"}, template("xxx/phtunnel_status"), _("Status"), 2).leaf = true
 	entry({"admin", "services", "mytest", "log"}, template("xxx/phtunnel_log"), _("Log"), 3).leaf = true
+	-- 文件路径 /usr/lib/lua/luci/model/cbi/xxx/log.lua
+	entry({"admin", "services", "mytest", "cbilog"}, cbi("xxx/log"), _("Logs"), 6).leaf = true
 
 	local node = entry({"admin", "services", "mytest", "inner_status"}, template("xxx/phtunnel_inner_status"), nil, 4)
 	node.leaf = true
