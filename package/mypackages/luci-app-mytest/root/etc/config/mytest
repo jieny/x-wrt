@@ -1,2 +1,8 @@
 # root 下的文件都会打包进入固件 
 # test config
+
+config base 'base'
+	option enabled '0'
+
+config log 'log'
+	option path '/var/log/mytest.log'

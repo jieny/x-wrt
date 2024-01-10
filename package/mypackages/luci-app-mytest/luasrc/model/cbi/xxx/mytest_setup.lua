@@ -1,5 +1,5 @@
 -- m = Map("cbi_file", translate("First Tab Form"), translate("Please fill out the form below")) -- cbi_file is the config file in /etc/config
-m = Map("phtunnel")
+m = Map("mytest")
 m.reset = true
 
 -- d = m:section(TypedSection, "info", "Part A of the form")  -- info is the section called info in cbi_file
@@ -17,7 +17,7 @@ enabled.rmempty = false
 
 m.apply_on_parse = true
 m.on_after_apply = function(self)
-	io.popen("/etc/init.d/phtunnel restart")
+	io.popen("/etc/init.d/phtunnel status")
 end
 
 return m
