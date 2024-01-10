@@ -201,6 +201,7 @@ define Package/mytest/install
 	echo "install...end"
 endef
 
+# 软件包安装之后处理的脚本
 define Package/mytest/postinst
 #!/bin/sh
 echo "postinst..."

@@ -1,0 +1,8 @@
+{
+  "mytest-luci-app": {
+    "description": "mytest luci interface",
+    "read": {
+      "cgi-io": [ "download" ]
+    }
+  }
+}
