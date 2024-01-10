@@ -27,10 +27,73 @@
 				}
 			}
 	);
+
+	function showAlert() {
+		alert('哈哈，按钮被点击了！');
+	}
 	//]]>
 </script>
 <fieldset class="cbi-section" id="_log_fieldset">
 	<input class="cbi-button cbi-input-remove" type="button" onclick="clear_log()" value="<%:Clear logs%>" style="margin-left: 10px; margin-top: 10px;">
 	<textarea id="log_textarea" class="cbi-input-textarea" style="width: calc(100% - 20px); height: 500px; margin: 10px;" data-update="change" rows="5" wrap="off" readonly="readonly"></textarea>
-	123456
+	<h1>静态页面示例</h1>
+
+	<label for="text-input">文本输入框：</label>
+	<input type="text" id="text-input" placeholder="请输入文本">
+
+	<label for="password-input">密码输入框：</label>
+	<input type="password" id="password-input" placeholder="请输入密码">
+
+	<label for="email-input">邮箱输入框：</label>
+	<input type="email" id="email-input" placeholder="请输入邮箱">
+
+	<label for="select-dropdown">下拉框：</label>
+	<select id="select-dropdown">
+		<option value="option1">选项1</option>
+		<option value="option2">选项2</option>
+		<option value="option3">选项3</option>
+	</select>
+
+	<label for="textarea">文本域：</label>
+	<textarea id="textarea" rows="4" placeholder="请输入文本"></textarea>
+
+	<label>单选框：</label>
+	<input type="radio" id="radio1" name="radio-group" checked>
+	<label for="radio1">选项1</label>
+	<input type="radio" id="radio2" name="radio-group">
+	<label for="radio2">选项2</label>
+
+	<label>复选框：</label>
+	<input type="checkbox" id="checkbox1">
+	<label for="checkbox1">选项1</label>
+	<input type="checkbox" id="checkbox2">
+	<label for="checkbox2">选项2</label>
+
+	<label for="date-input">日期选择器：</label>
+	<input type="date" id="date-input">
+
+	<label for="color-input">颜色选择器：</label>
+	<input type="color" id="color-input">
+
+	<label for="range-input">范围输入框：</label>
+	<input type="range" id="range-input" min="0" max="100" value="50">
+
+	<label for="file-input">文件上传：</label>
+	<input type="file" id="file-input">
+
+	<label>数字输入框：</label>
+	<input type="number" id="number-input" placeholder="请输入数字">
+
+	<label>电话号码输入框：</label>
+	<input type="tel" id="tel-input" placeholder="请输入电话号码">
+
+	<label>网址输入框：</label>
+	<input type="url" id="url-input" placeholder="请输入网址">
+
+	<button type="button" onclick="showAlert()">提交</button>
+	<script>
+		function showAlertTest() {
+			alert('呵呵，按钮被点击了！');
+		}
+	</script>
 </fieldset>
