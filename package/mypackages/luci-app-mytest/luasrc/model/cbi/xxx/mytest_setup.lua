@@ -1,3 +1,7 @@
+-- 导入必要的模块
+local sys = require("luci.sys")
+local json = require("cjson")
+
 -- m = Map("cbi_file", translate("First Tab Form"), translate("Please fill out the form below")) -- cbi_file is the config file in /etc/config
 -- mytest 是配置文件名
 -- m = Map("alist", translate("Alist"), translate("A file list program that supports multiple storage.") .. "<br/>" .. [[<a href="https://alist.nn.ci/zh/guide/drivers/local.html" target="_blank">]] .. translate("User Manual") .. [[</a>]])
@@ -11,9 +15,10 @@ m.reset = true
 -- config 'info' 'A'
 --    option 'name' 'OpenWRT'
 
-
+-- 创建一个名为 "basic" 的部分
 local s = m:section(NamedSection, "base", "base", translate("Base Setup1"))
 
+-- 添加一个开关控件
 enabled = s:option(Flag, "enabled", translate("Enabled"))
 enabled.rmempty = false
 -- 1 为 √
@@ -51,6 +56,61 @@ o.rawhtml = true
 -- 这行代码指定了一个模板文件，用于自定义按钮选项的显示。模板文件的路径是 "alist/admin_info"。这样可以通过自定义模板文件来灵活控制按钮选项的外观和行为
 -- /usr/lib/lua/luci/view/alist/admin_info.htm
 o.template = "alist/admin_info"
+
+-- 添加一个选择框控件
+o = s:option(ListValue, "select_box", translate("Select Box"))
+o:value("option1", "Option 1")
+o:value("option2", "Option 2")
+o:value("option3", "Option 3")
+
+-- 添加一个文本框控件
+o = s:option(Value, "text_field", translate("Text Field"))
+o.description = translate("Enter some text here.")
+
+-- 添加一个按钮控件
+o = s:option(Button, "my_button", translate("Go admin/system/system"))
+o.inputstyle = "apply"
+o.write = function(self, section)
+	-- 在按钮被点击时执行的操作
+	sys.call("echo 'Button clicked!' > /tmp/button_clicked")
+	-- luci.http.redirect(luci.dispatcher.build_url("admin", "system", "system"))
+
+	-- 创建一个 Lua 表格
+	local myObject = {
+		key1 = 'value1',
+		key2 = 'value2',
+		key3 = {
+			subkey1 = 'subvalue1一样',
+			subkey2 = 'subvalue2饿了'
+		}
+	}
+
+	-- 将 Lua 表格转换为 JSON 格式
+	local serialized_config = json.encode(myObject);
+	serialized_config = json.encode(section);
+
+	-- 在生成的 JSON 字符串中替换掉 "
+	-- serialized_config = serialized_config:gsub("\"", ""):gsub(" ", "")
+	serialized_config = serialized_config:gsub("\"", "")
+
+	-- {key1:value1,key3:{subkey2:subvalue2,subkey1:subvalue1},key2:value2}
+	sys.call("echo " .. serialized_config .. " > /tmp/button_clicked")
+
+	--serialized_config = "test";
+
+	-- serialized_config = '"' .. serialized_config .. '"'
+
+	-- 构建 JavaScript 代码，使用 alert 弹窗显示序列化后的字符串
+	local javascript_code = [[
+        <script type="text/javascript">
+            alert("]] .. serialized_config .. [[");
+        </script>
+    ]]
+	-- javascript_code = "<script type=\"text/javascript\">alert(\"" .. serialized_config .. "\");</script>"
+
+	-- 发送 JavaScript 代码到浏览器
+	luci.http.write(javascript_code)
+end
 
 
 m.apply_on_parse = true
