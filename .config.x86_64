@@ -2722,7 +2722,7 @@ CONFIG_PACKAGE_automake=y
 CONFIG_PACKAGE_binutils=y
 # CONFIG_PACKAGE_bison is not set
 # CONFIG_PACKAGE_delve is not set
-# CONFIG_PACKAGE_diffutils is not set
+CONFIG_PACKAGE_diffutils=y
 # CONFIG_PACKAGE_flex is not set
 CONFIG_PACKAGE_gcc=y
 
@@ -2735,21 +2735,21 @@ CONFIG_PACKAGE_gcc=y
 # end of Libraries
 
 CONFIG_PACKAGE_gdb=y
-# CONFIG_PACKAGE_gdbserver is not set
+CONFIG_PACKAGE_gdbserver=m
 # CONFIG_PACKAGE_gitlab-runner is not set
 # CONFIG_PACKAGE_gperf is not set
-# CONFIG_PACKAGE_libtool-bin is not set
+CONFIG_PACKAGE_libtool-bin=m
 # CONFIG_PACKAGE_lpc21isp is not set
-# CONFIG_PACKAGE_lttng-tools is not set
+CONFIG_PACKAGE_lttng-tools=m
 CONFIG_PACKAGE_m4=y
 CONFIG_PACKAGE_make=y
 # CONFIG_PACKAGE_mt76-test is not set
-# CONFIG_PACKAGE_nasm is not set
+CONFIG_PACKAGE_nasm=y
 CONFIG_PACKAGE_objdump=y
 CONFIG_PACKAGE_patch=m
 # CONFIG_PACKAGE_perf is not set
-# CONFIG_PACKAGE_pkg-config is not set
-# CONFIG_PACKAGE_pkgconf is not set
+CONFIG_PACKAGE_pkg-config=m
+CONFIG_PACKAGE_pkgconf=m
 # CONFIG_PACKAGE_tmon is not set
 # CONFIG_PACKAGE_trace-cmd is not set
 # CONFIG_PACKAGE_trace-cmd-extra is not set
@@ -4734,7 +4734,7 @@ CONFIG_ZSTD_OPTIMIZE_O3=y
 # CONFIG_PACKAGE_libodbc is not set
 # CONFIG_PACKAGE_libodbccr is not set
 # CONFIG_PACKAGE_libodbcinst is not set
-# CONFIG_PACKAGE_libpq is not set
+CONFIG_PACKAGE_libpq=y
 # CONFIG_PACKAGE_libpqxx is not set
 CONFIG_PACKAGE_libsqlite3=y
 
@@ -5875,7 +5875,7 @@ CONFIG_PCRE2_JIT_ENABLED=y
 # CONFIG_PACKAGE_libpcsclite is not set
 # CONFIG_PACKAGE_libpfring is not set
 # CONFIG_PACKAGE_libpkcs11-spy is not set
-# CONFIG_PACKAGE_libpkgconf is not set
+CONFIG_PACKAGE_libpkgconf=m
 # CONFIG_PACKAGE_libpng is not set
 CONFIG_PACKAGE_libpopt=y
 # CONFIG_PACKAGE_libpri is not set
@@ -5976,7 +5976,7 @@ CONFIG_PACKAGE_libunistring=m
 # CONFIG_PACKAGE_libunwind is not set
 # CONFIG_PACKAGE_libupnp is not set
 # CONFIG_PACKAGE_libupnpp is not set
-# CONFIG_PACKAGE_liburcu is not set
+CONFIG_PACKAGE_liburcu=m
 CONFIG_PACKAGE_liburing=y
 CONFIG_PACKAGE_libusb-1.0=y
 # CONFIG_PACKAGE_libusb-compat is not set
@@ -6011,7 +6011,7 @@ CONFIG_PACKAGE_libxml2=y
 # CONFIG_PACKAGE_lmdb is not set
 # CONFIG_PACKAGE_log4cplus is not set
 # CONFIG_PACKAGE_loudmouth is not set
-# CONFIG_PACKAGE_lttng-ust is not set
+CONFIG_PACKAGE_lttng-ust=m
 # CONFIG_PACKAGE_minizip is not set
 # CONFIG_PACKAGE_msgpack-c is not set
 # CONFIG_PACKAGE_mtdev is not set
@@ -7836,14 +7836,14 @@ CONFIG_PACKAGE_avahi-dbus-daemon=y
 # CONFIG_PACKAGE_bind-tools is not set
 CONFIG_PACKAGE_chinadns-ng=y
 CONFIG_PACKAGE_ddns-scripts=y
-# CONFIG_PACKAGE_ddns-scripts-cloudflare is not set
+CONFIG_PACKAGE_ddns-scripts-cloudflare=y
 # CONFIG_PACKAGE_ddns-scripts-cnkuai is not set
 # CONFIG_PACKAGE_ddns-scripts-digitalocean is not set
-# CONFIG_PACKAGE_ddns-scripts-dnspod is not set
+CONFIG_PACKAGE_ddns-scripts-dnspod=y
 # CONFIG_PACKAGE_ddns-scripts-freedns is not set
 # CONFIG_PACKAGE_ddns-scripts-gandi is not set
 # CONFIG_PACKAGE_ddns-scripts-gcp is not set
-# CONFIG_PACKAGE_ddns-scripts-godaddy is not set
+CONFIG_PACKAGE_ddns-scripts-godaddy=y
 # CONFIG_PACKAGE_ddns-scripts-luadns is not set
 # CONFIG_PACKAGE_ddns-scripts-noip is not set
 # CONFIG_PACKAGE_ddns-scripts-ns1 is not set
@@ -7864,7 +7864,7 @@ CONFIG_PACKAGE_dns2tcp=y
 # CONFIG_PACKAGE_dnscrypt-proxy-resolvers is not set
 # CONFIG_PACKAGE_dnsdist is not set
 # CONFIG_PACKAGE_dnsdist-full is not set
-# CONFIG_PACKAGE_dnslookup is not set
+CONFIG_PACKAGE_dnslookup=y
 # CONFIG_PACKAGE_dnsproxy is not set
 # CONFIG_PACKAGE_drill is not set
 # CONFIG_PACKAGE_hostip is not set
@@ -9159,9 +9159,9 @@ CONFIG_PACKAGE_zstd=y
 #
 # CONFIG_PACKAGE_mariadb-client is not set
 # CONFIG_PACKAGE_mariadb-server-base is not set
-# CONFIG_PACKAGE_pgsql-cli is not set
-# CONFIG_PACKAGE_pgsql-cli-extra is not set
-# CONFIG_PACKAGE_pgsql-server is not set
+CONFIG_PACKAGE_pgsql-cli=y
+CONFIG_PACKAGE_pgsql-cli-extra=y
+CONFIG_PACKAGE_pgsql-server=y
 # CONFIG_PACKAGE_rrdcgi1 is not set
 # CONFIG_PACKAGE_rrdtool1 is not set
 # CONFIG_PACKAGE_sqlite3-cli is not set
@@ -9340,7 +9340,7 @@ CONFIG_PACKAGE_bash=y
 # CONFIG_PACKAGE_klish is not set
 # CONFIG_PACKAGE_mksh is not set
 # CONFIG_PACKAGE_tcsh is not set
-# CONFIG_PACKAGE_zsh is not set
+CONFIG_PACKAGE_zsh=m
 # end of Shells
 
 #
