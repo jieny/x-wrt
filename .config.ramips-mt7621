@@ -6231,6 +6231,7 @@ CONFIG_PACKAGE_luci-app-lucky=m
 # CONFIG_PACKAGE_luci-app-mjpg-streamer is not set
 CONFIG_PACKAGE_luci-app-modemband=m
 CONFIG_PACKAGE_luci-app-mwan3=m
+CONFIG_PACKAGE_luci-app-mytest=m
 # CONFIG_PACKAGE_luci-app-natmap is not set
 CONFIG_PACKAGE_luci-app-nextdns=m
 # CONFIG_PACKAGE_luci-app-nft-qos is not set
@@ -7994,7 +7995,7 @@ CONFIG_PACKAGE_p910nd=m
 # CONFIG_PACKAGE_devlink is not set
 # CONFIG_PACKAGE_frr is not set
 # CONFIG_PACKAGE_genl is not set
-CONFIG_PACKAGE_igmpproxy=y
+CONFIG_PACKAGE_igmpproxy=m
 CONFIG_PACKAGE_ip-bridge=y
 CONFIG_PACKAGE_ip-full=y
 # CONFIG_PACKAGE_ip-tiny is not set
@@ -8570,7 +8571,7 @@ CONFIG_PACKAGE_wifischedule=m
 # CONFIG_PACKAGE_eapol-test-mbedtls is not set
 # CONFIG_PACKAGE_eapol-test-openssl is not set
 # CONFIG_PACKAGE_eapol-test-wolfssl is not set
-# CONFIG_PACKAGE_hostapd is not set
+CONFIG_PACKAGE_hostapd=m
 # CONFIG_PACKAGE_hostapd-basic is not set
 # CONFIG_PACKAGE_hostapd-basic-mbedtls is not set
 # CONFIG_PACKAGE_hostapd-basic-openssl is not set
@@ -8585,7 +8586,7 @@ CONFIG_PACKAGE_hostapd-common=y
 # CONFIG_PACKAGE_hs20-common is not set
 # CONFIG_PACKAGE_hs20-server is not set
 # CONFIG_PACKAGE_wpa-cli is not set
-# CONFIG_PACKAGE_wpa-supplicant is not set
+CONFIG_PACKAGE_wpa-supplicant=m
 # CONFIG_WPA_RFKILL_SUPPORT is not set
 CONFIG_WPA_MSG_MIN_PRIORITY=3
 # CONFIG_WPA_WOLFSSL is not set
@@ -8817,7 +8818,7 @@ CONFIG_PACKAGE_odhcpd_ipv6only_ext_cer_id=0
 # end of Configuration
 
 # CONFIG_PACKAGE_ola is not set
-CONFIG_PACKAGE_omcproxy=y
+CONFIG_PACKAGE_omcproxy=m
 # CONFIG_PACKAGE_onionshare-cli is not set
 # CONFIG_PACKAGE_oor is not set
 # CONFIG_PACKAGE_open-iscsi is not set
@@ -9790,7 +9791,7 @@ CONFIG_PACKAGE_qrencode=m
 # CONFIG_PACKAGE_ravpower-mcu is not set
 # CONFIG_PACKAGE_readsb is not set
 # CONFIG_PACKAGE_relayctl is not set
-# CONFIG_PACKAGE_rename is not set
+CONFIG_PACKAGE_rename=y
 # CONFIG_PACKAGE_restic is not set
 # CONFIG_PACKAGE_rev is not set
 # CONFIG_PACKAGE_ripgrep is not set
@@ -10076,7 +10077,7 @@ CONFIG_PACKAGE_luci-app-natflow-users=y
 #
 # Printer
 #
-CONFIG_PACKAGE_p910nd-helper=m
+# CONFIG_PACKAGE_p910nd-helper is not set
 # end of Printer
 
 #
