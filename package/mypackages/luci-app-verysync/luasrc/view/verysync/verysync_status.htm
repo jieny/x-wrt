@@ -20,7 +20,10 @@ function openClient() {
 	var pos = curWwwPath.indexOf(pathName);
 	var localhostPath = curWwwPath.substring(0, pos);
 	var clientPort = window.document.getElementById("cbid.verysync.config.port").value
-	var url = localhostPath + ":" + clientPort;
+	// clientPort读不到，待处理
+	var url = localhostPath + ":" + 8886;
+	// /usr/lib/lua/luci/view/verysync
+	console.log(url)
 	window.open(url)
 };
 //]]>

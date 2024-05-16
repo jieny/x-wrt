@@ -1,22 +1,58 @@
 #!/bin/sh /etc/rc.common
 
-START=50
-STOP=10
-# USE_PROCD=1
+START=102
+#STOP=10
+USE_PROCD=1
 
 VERYSYNC="/usr/bin/verysync"
 
+# /usr/bin/verysync -gui-address=0.0.0.0:8886 -logfile=/var/log/verysync.log -home=/etc/verysync/ -no-browser >/dev/null 2>&1 &
+# service verysync start
+# 无法多次start，待处理
 start_service() {
 	local enabled="$(uci get verysync.config.enabled)"
 	local port="$(uci get verysync.config.port)"
 	local profile="$(uci get verysync.config.profile)"
-	stop
+
+	echo ${enabled}
+	echo ${port}
+	echo ${profile}
+	
+  # 检查 Verysync 进程是否在运行中
+  if pgrep -f /usr/bin/verysync >/dev/null; then
+      echo '已经有在运行了'
+      exit 0
+  else
+      echo 'starting'
+  fi
+	
+	[ "${enabled}" == "0" ] || echo false
+	# 不是enable的话退出
 	[ "${enabled}" == "1" ] || exit 0
+
 	export HOME="/root/"
-	# /usr/bin/verysync -gui-address=0.0.0.0:8886 -logfile=/var/log/verysync.log -home=/etc/verysync/ -no-browser >/dev/null 2>&1 &
+	echo ${HOME}
+
 	"${VERYSYNC}" -gui-address="0.0.0.0:${port}" -logfile="/var/log/verysync.log" -home="${profile}" -no-browser >/dev/null 2>&1 &
 }
 
+# 不知道为什么无法stop，要手动执行，待处理
+# service verysync stop
 stop_service() {
-	kill -9 `pgrep "${VERYSYNC}"` >/dev/null 2>&1
+	# ps -aux | grep verysync
+	# pgrep verysync
+	# pgrep -f /usr/bin/verysync
+	# 找不到
+	# pgrep /usr/bin/verysync
+	# kill -9 $(pgrep verysync)
+	# kill -9 $(pgrep -f /usr/bin/verysync)
+	# 
+	echo 'stoping'
+	# pgrep verysync
+
+	# kill -9 `pgrep "${VERYSYNC}"` >/dev/null 2>&1
+	kill -9 `pgrep -f /usr/bin/verysync` >/dev/null 2>&1
+	
+	#kill -9 `pgrep -f "${VERYSYNC}"` >/dev/null 2>&1
+	#kill -9 $(pgrep verysync) >/dev/null 2>&1
 }
