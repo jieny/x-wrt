@@ -1,7 +1,7 @@
-diff --git a/./a/root/etc/config/firewall b/./b/root/etc/config/firewall
+diff --git a/root/etc/config/firewall b/root/etc/config/firewall
 index d78a00c..7354634 100755
---- a/./a/root/etc/config/firewall
-+++ b/./b/root/etc/config/firewall
+--- a/root/etc/config/firewall
++++ b/root/etc/config/firewall
 @@ -1,8 +1,8 @@
  config defaults
  	option syn_flood	1
