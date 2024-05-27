@@ -7,7 +7,8 @@
 # 修改 b 文件夹中的配置文件 "C:\Users\jieny\Desktop\b\root\etc\config\firewall"
 # 用 WSL
 # cd /mnt/c/Users/jieny/Desktop
-# git diff ./a/root/etc/config/firewall ./b/root/etc/config/firewall > 300-fw4-config.patch
+# git diff a/root/etc/config/firewall b/root/etc/config/firewall > 300-fw4-config.patch
+# 去掉 300-fw4-config.patch 中重复的 /a和/b
 
 include $(TOPDIR)/rules.mk
 
