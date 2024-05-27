@@ -2,6 +2,13 @@
 # Copyright (C) 2021 Jo-Philipp Wich <jo@mein.io>
 #
 
+# 在 dl 中找文件 firewall4-2023-11-03-698a5335.tar.xz
+# 新建 a b 两个文件夹，复制压缩包里的 root 到两个文件夹
+# 修改 b 文件夹中的配置文件 "C:\Users\jieny\Desktop\b\root\etc\config\firewall"
+# 用 WSL
+# cd /mnt/c/Users/jieny/Desktop
+# git diff ./a/root/etc/config/firewall ./b/root/etc/config/firewall > 300-fw4-config.patch
+
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=firewall4
