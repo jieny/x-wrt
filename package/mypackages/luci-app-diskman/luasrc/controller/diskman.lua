@@ -19,7 +19,7 @@ function index()
 --     end
 --   end
 
-  if not executables_all_existed then return end
+--   if not executables_all_existed then return end
   -- entry(path, target, title, order)
   -- set leaf attr to true to pass argument throughe url (e.g. admin/system/disk/partition/sda)
   entry({"admin", "system", "diskman"}, alias("admin", "system", "diskman", "disks"), _("Disk Man"), 55)
