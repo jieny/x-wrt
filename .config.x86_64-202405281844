@@ -4262,7 +4262,7 @@ CONFIG_PERL_THREADS=y
 CONFIG_PERL_NOCOMMENT=y
 # end of Configuration
 
-# CONFIG_PACKAGE_perl-ack is not set
+CONFIG_PACKAGE_perl-ack=m
 # CONFIG_PACKAGE_perl-authen-sasl is not set
 # CONFIG_PACKAGE_perl-authen-sasl-xs is not set
 # CONFIG_PACKAGE_perl-cgi is not set
@@ -4272,7 +4272,7 @@ CONFIG_PERL_NOCOMMENT=y
 # CONFIG_PACKAGE_perl-device-usb is not set
 # CONFIG_PACKAGE_perl-encode-locale is not set
 # CONFIG_PACKAGE_perl-file-listing is not set
-# CONFIG_PACKAGE_perl-file-next is not set
+CONFIG_PACKAGE_perl-file-next=m
 # CONFIG_PACKAGE_perl-file-rsyncp is not set
 # CONFIG_PACKAGE_perl-file-sharedir-install is not set
 # CONFIG_PACKAGE_perl-html-form is not set
@@ -4319,7 +4319,7 @@ CONFIG_PACKAGE_perlbase-attributes=y
 # CONFIG_PACKAGE_perlbase-autouse is not set
 # CONFIG_PACKAGE_perlbase-b is not set
 CONFIG_PACKAGE_perlbase-base=y
-# CONFIG_PACKAGE_perlbase-benchmark is not set
+CONFIG_PACKAGE_perlbase-benchmark=m
 # CONFIG_PACKAGE_perlbase-bigint is not set
 # CONFIG_PACKAGE_perlbase-bignum is not set
 # CONFIG_PACKAGE_perlbase-blib is not set
@@ -4341,7 +4341,7 @@ CONFIG_PACKAGE_perlbase-data=y
 # CONFIG_PACKAGE_perlbase-dumpvalue is not set
 # CONFIG_PACKAGE_perlbase-dumpvar is not set
 CONFIG_PACKAGE_perlbase-dynaloader=y
-# CONFIG_PACKAGE_perlbase-encode is not set
+CONFIG_PACKAGE_perlbase-encode=m
 # CONFIG_PACKAGE_perlbase-encoding is not set
 # CONFIG_PACKAGE_perlbase-english is not set
 # CONFIG_PACKAGE_perlbase-env is not set
@@ -4356,7 +4356,7 @@ CONFIG_PACKAGE_perlbase-fcntl=y
 CONFIG_PACKAGE_perlbase-file=y
 # CONFIG_PACKAGE_perlbase-filecache is not set
 CONFIG_PACKAGE_perlbase-filehandle=y
-# CONFIG_PACKAGE_perlbase-filetest is not set
+CONFIG_PACKAGE_perlbase-filetest=m
 # CONFIG_PACKAGE_perlbase-filter is not set
 # CONFIG_PACKAGE_perlbase-findbin is not set
 # CONFIG_PACKAGE_perlbase-gdbm-file is not set
@@ -4364,7 +4364,7 @@ CONFIG_PACKAGE_perlbase-getopt=y
 # CONFIG_PACKAGE_perlbase-hash is not set
 # CONFIG_PACKAGE_perlbase-http-tiny is not set
 CONFIG_PACKAGE_perlbase-i18n=y
-# CONFIG_PACKAGE_perlbase-if is not set
+CONFIG_PACKAGE_perlbase-if=m
 CONFIG_PACKAGE_perlbase-integer=y
 CONFIG_PACKAGE_perlbase-io=y
 # CONFIG_PACKAGE_perlbase-ipc is not set
@@ -4375,7 +4375,7 @@ CONFIG_PACKAGE_perlbase-locale=y
 # CONFIG_PACKAGE_perlbase-math is not set
 # CONFIG_PACKAGE_perlbase-memoize is not set
 # CONFIG_PACKAGE_perlbase-meta-notation is not set
-# CONFIG_PACKAGE_perlbase-mime is not set
+CONFIG_PACKAGE_perlbase-mime=m
 # CONFIG_PACKAGE_perlbase-module is not set
 # CONFIG_PACKAGE_perlbase-mro is not set
 CONFIG_PACKAGE_perlbase-net=y
@@ -4388,7 +4388,7 @@ CONFIG_PACKAGE_perlbase-net=y
 CONFIG_PACKAGE_perlbase-params=y
 # CONFIG_PACKAGE_perlbase-perl5db is not set
 # CONFIG_PACKAGE_perlbase-perlio is not set
-# CONFIG_PACKAGE_perlbase-pod is not set
+CONFIG_PACKAGE_perlbase-pod=m
 CONFIG_PACKAGE_perlbase-posix=y
 CONFIG_PACKAGE_perlbase-re=y
 # CONFIG_PACKAGE_perlbase-safe is not set
@@ -4403,9 +4403,9 @@ CONFIG_PACKAGE_perlbase-socket=y
 # CONFIG_PACKAGE_perlbase-storable is not set
 CONFIG_PACKAGE_perlbase-symbol=y
 # CONFIG_PACKAGE_perlbase-sys is not set
-# CONFIG_PACKAGE_perlbase-tap is not set
-# CONFIG_PACKAGE_perlbase-term is not set
-# CONFIG_PACKAGE_perlbase-test is not set
+CONFIG_PACKAGE_perlbase-tap=m
+CONFIG_PACKAGE_perlbase-term=m
+CONFIG_PACKAGE_perlbase-test=m
 CONFIG_PACKAGE_perlbase-text=y
 CONFIG_PACKAGE_perlbase-thread=y
 CONFIG_PACKAGE_perlbase-threads=y
@@ -5637,8 +5637,8 @@ CONFIG_PACKAGE_libaio=y
 # CONFIG_PACKAGE_libasm is not set
 # CONFIG_PACKAGE_libassuan is not set
 # CONFIG_PACKAGE_libatasmart is not set
-# CONFIG_PACKAGE_libaudit is not set
-# CONFIG_PACKAGE_libauparse is not set
+CONFIG_PACKAGE_libaudit=m
+CONFIG_PACKAGE_libauparse=m
 CONFIG_PACKAGE_libavahi-client=y
 CONFIG_PACKAGE_libavahi-dbus-support=y
 # CONFIG_PACKAGE_libavahi-nodbus-support is not set
@@ -6215,7 +6215,7 @@ CONFIG_PACKAGE_luci-app-banip=y
 # CONFIG_PACKAGE_luci-app-bmx7 is not set
 # CONFIG_PACKAGE_luci-app-cjdns is not set
 # CONFIG_PACKAGE_luci-app-clamav is not set
-# CONFIG_PACKAGE_luci-app-commands is not set
+CONFIG_PACKAGE_luci-app-commands=m
 # CONFIG_PACKAGE_luci-app-crowdsec-firewall-bouncer is not set
 # CONFIG_PACKAGE_luci-app-cshark is not set
 CONFIG_PACKAGE_luci-app-dawn=m
@@ -6621,6 +6621,40 @@ CONFIG_PACKAGE_luci-i18n-banip-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-base-vi is not set
 CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-base-zh-tw is not set
+# CONFIG_PACKAGE_luci-i18n-commands-ar is not set
+# CONFIG_PACKAGE_luci-i18n-commands-bg is not set
+# CONFIG_PACKAGE_luci-i18n-commands-bn is not set
+# CONFIG_PACKAGE_luci-i18n-commands-ca is not set
+# CONFIG_PACKAGE_luci-i18n-commands-cs is not set
+# CONFIG_PACKAGE_luci-i18n-commands-da is not set
+# CONFIG_PACKAGE_luci-i18n-commands-de is not set
+# CONFIG_PACKAGE_luci-i18n-commands-el is not set
+# CONFIG_PACKAGE_luci-i18n-commands-es is not set
+# CONFIG_PACKAGE_luci-i18n-commands-fi is not set
+# CONFIG_PACKAGE_luci-i18n-commands-fr is not set
+# CONFIG_PACKAGE_luci-i18n-commands-he is not set
+# CONFIG_PACKAGE_luci-i18n-commands-hi is not set
+# CONFIG_PACKAGE_luci-i18n-commands-hu is not set
+# CONFIG_PACKAGE_luci-i18n-commands-it is not set
+# CONFIG_PACKAGE_luci-i18n-commands-ja is not set
+# CONFIG_PACKAGE_luci-i18n-commands-ko is not set
+# CONFIG_PACKAGE_luci-i18n-commands-lt is not set
+# CONFIG_PACKAGE_luci-i18n-commands-mr is not set
+# CONFIG_PACKAGE_luci-i18n-commands-ms is not set
+# CONFIG_PACKAGE_luci-i18n-commands-nl is not set
+# CONFIG_PACKAGE_luci-i18n-commands-no is not set
+# CONFIG_PACKAGE_luci-i18n-commands-pl is not set
+# CONFIG_PACKAGE_luci-i18n-commands-pt is not set
+# CONFIG_PACKAGE_luci-i18n-commands-pt-br is not set
+# CONFIG_PACKAGE_luci-i18n-commands-ro is not set
+# CONFIG_PACKAGE_luci-i18n-commands-ru is not set
+# CONFIG_PACKAGE_luci-i18n-commands-sk is not set
+# CONFIG_PACKAGE_luci-i18n-commands-sv is not set
+# CONFIG_PACKAGE_luci-i18n-commands-tr is not set
+# CONFIG_PACKAGE_luci-i18n-commands-uk is not set
+# CONFIG_PACKAGE_luci-i18n-commands-vi is not set
+CONFIG_PACKAGE_luci-i18n-commands-zh-cn=m
+# CONFIG_PACKAGE_luci-i18n-commands-zh-tw is not set
 # CONFIG_PACKAGE_luci-i18n-dashboard-ar is not set
 # CONFIG_PACKAGE_luci-i18n-dashboard-bg is not set
 # CONFIG_PACKAGE_luci-i18n-dashboard-bn is not set
@@ -10258,7 +10292,7 @@ CONFIG_PACKAGE_ntfs-3g-utils=y
 # CONFIG_PACKAGE_resize2fs is not set
 # CONFIG_PACKAGE_squashfs-tools-mksquashfs is not set
 # CONFIG_PACKAGE_squashfs-tools-unsquashfs is not set
-# CONFIG_PACKAGE_swap-utils is not set
+CONFIG_PACKAGE_swap-utils=m
 # CONFIG_PACKAGE_sysfsutils is not set
 CONFIG_PACKAGE_tune2fs=y
 # CONFIG_PACKAGE_xfs-admin is not set
@@ -10425,7 +10459,7 @@ CONFIG_PACKAGE_virtio-console-helper=y
 # CONFIG_PACKAGE_libselinux-validatetrans is not set
 # end of libselinux tools
 
-# CONFIG_PACKAGE_ack is not set
+CONFIG_PACKAGE_ack=m
 # CONFIG_PACKAGE_acpica-unix is not set
 CONFIG_PACKAGE_acpid=y
 CONFIG_PACKAGE_adb=m
@@ -10437,8 +10471,8 @@ CONFIG_PACKAGE_apk=m
 # CONFIG_PACKAGE_arp-whisper is not set
 # CONFIG_PACKAGE_at is not set
 # CONFIG_PACKAGE_atheepmgr is not set
-# CONFIG_PACKAGE_audit is not set
-# CONFIG_PACKAGE_audit-utils is not set
+CONFIG_PACKAGE_audit=m
+CONFIG_PACKAGE_audit-utils=m
 # CONFIG_PACKAGE_augeas is not set
 # CONFIG_PACKAGE_augeas-lenses is not set
 # CONFIG_PACKAGE_augeas-lenses-tests is not set
@@ -10471,7 +10505,7 @@ CONFIG_PACKAGE_cgroup-tools=m
 CONFIG_PACKAGE_cgroupfs-mount=y
 # CONFIG_CGROUPFS_MOUNT_KERNEL_CGROUPS is not set
 # CONFIG_PACKAGE_checkpolicy is not set
-# CONFIG_PACKAGE_checksec is not set
+CONFIG_PACKAGE_checksec=m
 # CONFIG_PACKAGE_checksec_automator is not set
 # CONFIG_PACKAGE_chkcon is not set
 # CONFIG_PACKAGE_cligen is not set
