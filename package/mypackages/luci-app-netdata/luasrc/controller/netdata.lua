@@ -9,7 +9,7 @@ function index()
 	end
 	local e = entry({"admin", "status", "netdata"}, alias("admin", "status", "netdata", "netdata"),_("NetData"), 10)
 	e.dependent = false
-	e.acl_depends = { "luci-app-netdata" }
+	-- e.acl_depends = { "luci-app-netdata" }
 	entry({"admin", "status", "netdata", "netdata"}, template("netdata"), _("NetData Monitoring"), 10).leaf = true
 	entry({"admin", "status", "netdata", "setting"}, cbi("netdata/netdata"), _("Base Setting"), 20).leaf=true
 	entry({"admin", "status", "netdata", "config"}, cbi("netdata/config"), _("Netdata Config"), 40).leaf=true
