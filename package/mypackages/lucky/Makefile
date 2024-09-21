@@ -8,8 +8,8 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=lucky
-PKG_VERSION:=2.8.3
-PKG_RELEASE:=220
+PKG_VERSION:=2.10.8
+PKG_RELEASE:=222
 PKGARCH:=all 
 
 ifeq ($(ARCH),mipsel)
@@ -42,7 +42,7 @@ endif
 
 PKG_LICENSE:=GPL-3.0-only
 PKG_LICENSE_FILES:=LICENSE
-PKG_MAINTAINER:=GDY666 <gdy666@foxmail.com>
+PKG_MAINTAINER:=jieny <576420147@qq.com>
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 PKG_HASH:=skip
@@ -54,7 +54,7 @@ define Package/$(PKG_NAME)
 	CATEGORY:=Network
 	TITLE:=Lucky dynamic domain name ddns-go service, socat,frp 
 	DEPENDS:=@(i386||x86_64||arm||aarch64||mipsel||mips)
-	URL:=https://github.com/gdy666/lucky
+	URL:=https://github.com/jieny/lucky
 endef
 
 define Package/$(PKG_NAME)/description
@@ -62,7 +62,8 @@ define Package/$(PKG_NAME)/description
 endef
 
 define Build/Prepare
-	[ ! -f $(PKG_BUILD_DIR)/$(PKG_NAME)_$(PKG_VERSION)_Linux_$(LUCKY_ARCH).tar.gz ] && wget https://github.com/gdy666/lucky/releases/download/v$(PKG_VERSION)/$(PKG_NAME)_$(PKG_VERSION)_Linux_$(LUCKY_ARCH).tar.gz -O $(PKG_BUILD_DIR)/$(PKG_NAME)_$(PKG_VERSION)_Linux_$(LUCKY_ARCH).tar.gz
+	[ ! -f $(PKG_BUILD_DIR)/$(PKG_NAME)_$(PKG_VERSION)_Linux_$(LUCKY_ARCH).tar.gz ] && wget https://github.com/jieny/lucky/releases/download/v$(PKG_VERSION)/$(PKG_NAME)_$(PKG_VERSION)_Linux_$(LUCKY_ARCH).tar.gz -O $(PKG_BUILD_DIR)/$
+	(PKG_NAME)_$(PKG_VERSION)_Linux_$(LUCKY_ARCH).tar.gz
 	tar -xzvf $(PKG_BUILD_DIR)/$(PKG_NAME)_$(PKG_VERSION)_Linux_$(LUCKY_ARCH).tar.gz -C $(PKG_BUILD_DIR)
 endef
 
