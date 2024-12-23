@@ -108,7 +108,7 @@ define Package/mytest
 	+ip-full +openssh-sftp-server \
 	+openvpn-easy-rsa +openvpn-openssl +pptpd +wireguard-tools +xl2tpd \
 	+git-http +nginx-full +nginx-mod-dav-ext +nginx-mod-headers-more +nginx-mod-lua +nginx-mod-stream +nginx-mod-ts \
-	+iftop +iperf3 +netcat +tcpdump +tcping +wakeonlan +wg-installer-client \
+	+iftop +iperf3 +netcat +tcpdump +wakeonlan +wg-installer-client \
 	+bzip2 +gzip +unzip \
     +eject +fdisk +lsblk +nano-full +acpid \
     +grep +less +lsof +more +mount-utils +sed +tar +tree +whereis +which +whois
