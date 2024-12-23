@@ -106,3 +106,5 @@ For a list of supported devices see the [OpenWrt Hardware Database](https://open
 ## License
 
 OpenWrt is licensed under GPL-2.0
+
+.config.ramips-mt7621-202412230929 去掉了passwall
